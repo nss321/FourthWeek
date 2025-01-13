@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 /*
  1. 스토리보드 객체 얹기
@@ -21,9 +23,19 @@ class ViewController: UIViewController, ViewPresenstableProtocol {
     let passwordTextField = UITextField()
     let nameTextField = UITextField()
     
+    let cyanView = UIView().then {
+        $0.backgroundColor = .systemCyan
+        $0.layer.borderColor = UIColor.black.cgColor
+        $0.layer.borderWidth = 1
+    }
+    
+    let yellowView = UIView().then { $0.backgroundColor = .systemYellow }
+    let grayView = UIView().then { $0.backgroundColor = .gray }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setConstraints()
+//        setConstraints()
+        setConstraintsUsingSnapKit()
     }
 
     func setConstraints() {
@@ -92,13 +104,44 @@ class ViewController: UIViewController, ViewPresenstableProtocol {
         NSLayoutConstraint.activate([
             nameTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
             nameTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-            nameTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 50),
+            nameTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             nameTextField.heightAnchor.constraint(equalToConstant: 44)
         ])
         nameTextField.backgroundColor = .blue
         
+    }
+    
+    
+    /// Snapkit Practice
+    func setConstraintsUsingSnapKit() {
+        [cyanView, yellowView, grayView].forEach { view.addSubview($0) }
         
+        // MARK: AutoLayout - SnapKit
+//        cyanView.snp.makeConstraints {
+//            $0.edges.equalToSuperview()
+//        }
+//        
+//        yellowView.snp.makeConstraints {
+//            $0.size.equalTo(200)
+//            $0.center.equalToSuperview()
+//        }
+//        
+//        grayView.snp.makeConstraints {
+//            $0.size.equalTo(100)
+//            $0.centerX.equalToSuperview()
+//            $0.top.equalTo(yellowView.snp.bottom).offset(50)
+//        }
+        
+        cyanView.snp.makeConstraints {
+            $0.size.equalTo(200)
+            $0.center.equalToSuperview()
+        }
+        
+        grayView.snp.makeConstraints {
+            $0.edges.equalTo(cyanView)
+        }
+    
     }
 
 }
