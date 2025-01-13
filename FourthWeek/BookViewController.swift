@@ -9,7 +9,14 @@ import UIKit
 
 final class BookViewController: UIViewController {
     
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+//    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+//        $0.backgroundColor = .tertiarySystemBackground
+//        $0.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
+//        $0.dataSource = self
+//        $0.delegate = self
+//    }
+    
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout()).then {
         $0.backgroundColor = .tertiarySystemBackground
         $0.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
         $0.dataSource = self
@@ -17,10 +24,18 @@ final class BookViewController: UIViewController {
     }
     
     let list = ["Hi", "Bye", "It's time to go to home!", "Hair cutcut", "Sir. Sean Jeonghoon Bae."]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configCollectionView()
+    }
+    
+    func collectionViewLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSizeMake(50, 50)
+        layout.scrollDirection = .horizontal
+        return layout
     }
 }
 
