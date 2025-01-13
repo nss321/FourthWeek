@@ -32,10 +32,35 @@ class ViewController: UIViewController, ViewPresenstableProtocol {
     let yellowView = UIView().then { $0.backgroundColor = .systemYellow }
     let grayView = UIView().then { $0.backgroundColor = .gray }
     
+    lazy var button = UIButton().then {
+        $0.setTitle("벝은", for: .normal)
+        $0.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        $0.backgroundColor = .systemTeal
+    }
+    
+    lazy var button2 = makeMyButton()
+    
+    lazy var button3 = {
+        let btn = UIButton()
+        btn.backgroundColor = .lightGray
+        btn.setTitle("법튼", for: .normal)
+        return btn
+    }()
+    
+    // viewDidLoad()보다 먼저 실행
+    let button4 = {
+        let btn = UIButton()
+        btn.backgroundColor = .lightGray
+        btn.setTitle("법튼", for: .normal)
+        return btn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
 //        setConstraints()
-        setConstraintsUsingSnapKit()
+//        setConstraintsUsingSnapKit()
+        configButton()
     }
 
     func setConstraints() {
@@ -115,7 +140,9 @@ class ViewController: UIViewController, ViewPresenstableProtocol {
     
     /// Snapkit Practice
     func setConstraintsUsingSnapKit() {
-        [cyanView, yellowView, grayView].forEach { view.addSubview($0) }
+        [cyanView, grayView, /*yellowView*/].forEach { view.addSubview($0) }
+        
+        cyanView.addSubview(yellowView)
         
         // MARK: AutoLayout - SnapKit
 //        cyanView.snp.makeConstraints {
@@ -139,10 +166,39 @@ class ViewController: UIViewController, ViewPresenstableProtocol {
         }
         
         grayView.snp.makeConstraints {
-            $0.edges.equalTo(cyanView)
+            $0.edges.equalTo(cyanView).inset(75)
+        }
+        
+        yellowView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(50)
         }
     
     }
+    
+    func configButton() {
+        view.addSubview(button)
+        
+        button.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.left.right.equalToSuperview().inset(32)
+            $0.height.equalTo(80)
+        }
+    }
+    
+    func makeMyButton() -> UIButton {
+        let btn = UIButton()
+        btn.backgroundColor = .lightGray
+        btn.setTitle("법튼", for: .normal)
+        return btn
+    }
+    
+    @objc 
+    func buttonTapped(_ sender: UIButton) {
+        let vc = BookViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 
 }
 
