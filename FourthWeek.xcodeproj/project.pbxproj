@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118C28052D35E58F0054899D /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C28042D35E58F0054899D /* RandomViewController.swift */; };
+		118C280C2D35FF590054899D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 118C280B2D35FF590054899D /* SnapKit */; };
+		118C280F2D35FF6E0054899D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 118C280E2D35FF6E0054899D /* Then */; };
+		118C28152D36030F0054899D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 118C28142D36030F0054899D /* Alamofire */; };
 		11B76E9F2D34963600BCE282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76E9E2D34963600BCE282 /* AppDelegate.swift */; };
 		11B76EA12D34963600BCE282 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76EA02D34963600BCE282 /* SceneDelegate.swift */; };
 		11B76EA32D34963600BCE282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76EA22D34963600BCE282 /* ViewController.swift */; };
 		11B76EA82D34963700BCE282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B76EA72D34963700BCE282 /* Assets.xcassets */; };
 		11B76EAB2D34963700BCE282 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11B76EAA2D34963700BCE282 /* Base */; };
 		11B76EB52D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76EB42D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift */; };
-		11B76EBD2D34B0F400BCE282 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 11B76EBC2D34B0F400BCE282 /* SnapKit */; };
-		11B76EC02D34B51D00BCE282 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 11B76EBF2D34B51D00BCE282 /* Then */; };
 		11B76EC82D34DA1F00BCE282 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76EC72D34DA1F00BCE282 /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118C28042D35E58F0054899D /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		11B76E9B2D34963600BCE282 /* FourthWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourthWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B76E9E2D34963600BCE282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B76EA02D34963600BCE282 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B76EBD2D34B0F400BCE282 /* SnapKit in Frameworks */,
-				11B76EC02D34B51D00BCE282 /* Then in Frameworks */,
+				118C28152D36030F0054899D /* Alamofire in Frameworks */,
+				118C280F2D35FF6E0054899D /* Then in Frameworks */,
+				118C280C2D35FF590054899D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 				11B76EAC2D34963700BCE282 /* Info.plist */,
 				11B76EB42D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift */,
 				11B76EC72D34DA1F00BCE282 /* BookViewController.swift */,
+				118C28042D35E58F0054899D /* RandomViewController.swift */,
 			);
 			path = FourthWeek;
 			sourceTree = "<group>";
@@ -91,8 +96,9 @@
 			);
 			name = FourthWeek;
 			packageProductDependencies = (
-				11B76EBC2D34B0F400BCE282 /* SnapKit */,
-				11B76EBF2D34B51D00BCE282 /* Then */,
+				118C280B2D35FF590054899D /* SnapKit */,
+				118C280E2D35FF6E0054899D /* Then */,
+				118C28142D36030F0054899D /* Alamofire */,
 			);
 			productName = FourthWeek;
 			productReference = 11B76E9B2D34963600BCE282 /* FourthWeek.app */;
@@ -123,8 +129,9 @@
 			);
 			mainGroup = 11B76E922D34963600BCE282;
 			packageReferences = (
-				11B76EBB2D34B0F400BCE282 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				11B76EBE2D34B51D00BCE282 /* XCRemoteSwiftPackageReference "Then" */,
+				118C280A2D35FF590054899D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				118C280D2D35FF6E0054899D /* XCRemoteSwiftPackageReference "Then" */,
+				118C28132D36030F0054899D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 11B76E9C2D34963600BCE282 /* Products */;
 			projectDirPath = "";
@@ -155,6 +162,7 @@
 				11B76EA32D34963600BCE282 /* ViewController.swift in Sources */,
 				11B76EB52D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift in Sources */,
 				11B76EC82D34DA1F00BCE282 /* BookViewController.swift in Sources */,
+				118C28052D35E58F0054899D /* RandomViewController.swift in Sources */,
 				11B76E9F2D34963600BCE282 /* AppDelegate.swift in Sources */,
 				11B76EA12D34963600BCE282 /* SceneDelegate.swift in Sources */,
 			);
@@ -379,7 +387,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		11B76EBB2D34B0F400BCE282 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		118C280A2D35FF590054899D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -387,7 +395,7 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		11B76EBE2D34B51D00BCE282 /* XCRemoteSwiftPackageReference "Then" */ = {
+		118C280D2D35FF6E0054899D /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
 			requirement = {
@@ -395,18 +403,31 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		118C28132D36030F0054899D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		11B76EBC2D34B0F400BCE282 /* SnapKit */ = {
+		118C280B2D35FF590054899D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11B76EBB2D34B0F400BCE282 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 118C280A2D35FF590054899D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		11B76EBF2D34B51D00BCE282 /* Then */ = {
+		118C280E2D35FF6E0054899D /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11B76EBE2D34B51D00BCE282 /* XCRemoteSwiftPackageReference "Then" */;
+			package = 118C280D2D35FF6E0054899D /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		118C28142D36030F0054899D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 118C28132D36030F0054899D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
