@@ -28,7 +28,6 @@ struct UserDetail: Decodable {
     let gender: String
     let name: UserName
     let email: String
-    
 }
 
 struct UserName: Decodable {
