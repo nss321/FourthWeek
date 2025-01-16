@@ -24,6 +24,10 @@
 		11E366962D375CF5008C1E04 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366952D375CF3008C1E04 /* Book.swift */; };
 		11E366982D375DCF008C1E04 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11E366972D375DCF008C1E04 /* .gitignore */; };
 		11E3669A2D375E7A008C1E04 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366992D375E75008C1E04 /* APIKey.swift */; };
+		11E366BE2D377B0E008C1E04 /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366BC2D377B0E008C1E04 /* MarketTableViewCell.swift */; };
+		11E366BF2D377B0E008C1E04 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366BD2D377B0E008C1E04 /* MarketViewController.swift */; };
+		11E366C42D377C0F008C1E04 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366C32D377C0B008C1E04 /* Coin.swift */; };
+		11E366F92D3785CF008C1E04 /* BlackRadiusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366F82D3785CF008C1E04 /* BlackRadiusLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		11E366952D375CF3008C1E04 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		11E366972D375DCF008C1E04 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		11E366992D375E75008C1E04 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		11E366BC2D377B0E008C1E04 /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
+		11E366BD2D377B0E008C1E04 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		11E366C32D377C0B008C1E04 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		11E366F82D3785CF008C1E04 /* BlackRadiusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,19 +87,13 @@
 		11B76E9D2D34963600BCE282 /* FourthWeek */ = {
 			isa = PBXGroup;
 			children = (
-				11E366992D375E75008C1E04 /* APIKey.swift */,
-				11E366942D375CDE008C1E04 /* Kakao */,
-				11B76E9E2D34963600BCE282 /* AppDelegate.swift */,
-				11B76EA02D34963600BCE282 /* SceneDelegate.swift */,
-				11B76EA22D34963600BCE282 /* ViewController.swift */,
-				11E3668D2D374BEB008C1E04 /* KakaoBookSearchTableViewCell.swift */,
-				11E3668E2D374BEB008C1E04 /* KakaoBookSearchViewController.swift */,
-				11B76EA72D34963700BCE282 /* Assets.xcassets */,
-				11B76EA92D34963700BCE282 /* LaunchScreen.storyboard */,
+				11E366F72D3785B6008C1E04 /* CustomView */,
 				11B76EAC2D34963700BCE282 /* Info.plist */,
-				11B76EB42D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift */,
-				11B76EC72D34DA1F00BCE282 /* BookViewController.swift */,
-				118C28042D35E58F0054899D /* RandomViewController.swift */,
+				11E366C12D377B3A008C1E04 /* App */,
+				11E366C22D377B52008C1E04 /* ViewController */,
+				11E366992D375E75008C1E04 /* APIKey.swift */,
+				11E366C02D377B18008C1E04 /* Market */,
+				11E366942D375CDE008C1E04 /* Kakao */,
 			);
 			path = FourthWeek;
 			sourceTree = "<group>";
@@ -99,9 +101,51 @@
 		11E366942D375CDE008C1E04 /* Kakao */ = {
 			isa = PBXGroup;
 			children = (
+				11E3668D2D374BEB008C1E04 /* KakaoBookSearchTableViewCell.swift */,
+				11E3668E2D374BEB008C1E04 /* KakaoBookSearchViewController.swift */,
 				11E366952D375CF3008C1E04 /* Book.swift */,
 			);
 			path = Kakao;
+			sourceTree = "<group>";
+		};
+		11E366C02D377B18008C1E04 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				11E366C32D377C0B008C1E04 /* Coin.swift */,
+				11E366BC2D377B0E008C1E04 /* MarketTableViewCell.swift */,
+				11E366BD2D377B0E008C1E04 /* MarketViewController.swift */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		11E366C12D377B3A008C1E04 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				11B76E9E2D34963600BCE282 /* AppDelegate.swift */,
+				11B76EA02D34963600BCE282 /* SceneDelegate.swift */,
+				11B76EA72D34963700BCE282 /* Assets.xcassets */,
+				11B76EA92D34963700BCE282 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		11E366C22D377B52008C1E04 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11B76EA22D34963600BCE282 /* ViewController.swift */,
+				11B76EB42D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift */,
+				11B76EC72D34DA1F00BCE282 /* BookViewController.swift */,
+				118C28042D35E58F0054899D /* RandomViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		11E366F72D3785B6008C1E04 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				11E366F82D3785CF008C1E04 /* BlackRadiusLabel.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +233,14 @@
 			files = (
 				11B76EA32D34963600BCE282 /* ViewController.swift in Sources */,
 				11B76EB52D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift in Sources */,
+				11E366F92D3785CF008C1E04 /* BlackRadiusLabel.swift in Sources */,
 				11B76EC82D34DA1F00BCE282 /* BookViewController.swift in Sources */,
 				11E3668F2D374BEB008C1E04 /* KakaoBookSearchTableViewCell.swift in Sources */,
+				11E366BE2D377B0E008C1E04 /* MarketTableViewCell.swift in Sources */,
+				11E366BF2D377B0E008C1E04 /* MarketViewController.swift in Sources */,
 				11E3669A2D375E7A008C1E04 /* APIKey.swift in Sources */,
 				11E366902D374BEB008C1E04 /* KakaoBookSearchViewController.swift in Sources */,
+				11E366C42D377C0F008C1E04 /* Coin.swift in Sources */,
 				11E366962D375CF5008C1E04 /* Book.swift in Sources */,
 				118C28052D35E58F0054899D /* RandomViewController.swift in Sources */,
 				11B76E9F2D34963600BCE282 /* AppDelegate.swift in Sources */,
