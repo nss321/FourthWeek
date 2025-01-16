@@ -128,8 +128,6 @@ class KakaoBookSearchViewController: UIViewController {
                     self.bookList.append(contentsOf: value.documents)
                 }
                 
-                
-                
             case .failure(let error):
                 print(error)
             }

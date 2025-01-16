@@ -8,46 +8,26 @@
 import UIKit
 
 final class BookViewController: UIViewController {
-    
-//    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-//        $0.backgroundColor = .tertiarySystemBackground
-//        $0.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
-//        $0.dataSource = self
-//        $0.delegate = self
-//    }
-    
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout()).then {
-        $0.backgroundColor = .tertiarySystemBackground
-        $0.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
-        $0.dataSource = self
-        $0.delegate = self
-    }
+
+    var mainView = BookView()
     
     let list = ["Hi", "Bye", "It's time to go to home!", "Hair cutcut", "Sir. Sean Jeonghoon Bae."]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        configCollectionView()
+    override func loadView() {
+        super.loadView()
+        view = mainView
     }
     
-    func collectionViewLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSizeMake(50, 50)
-        layout.scrollDirection = .horizontal
-        return layout
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mainView.collectionView.dataSource = self
+        mainView.collectionView.delegate = self
     }
 }
 
 
 // MARK: CollectionView DataSource
 extension BookViewController: UICollectionViewDataSource {
-    func configCollectionView() {
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         list.count
@@ -86,7 +66,7 @@ extension BookViewController: UICollectionViewDelegateFlowLayout {
 
 
 // MARK: CollectionView Cell
-fileprivate class BookCollectionViewCell: UICollectionViewCell {
+class BookCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "MyCollectionViewCell"
     

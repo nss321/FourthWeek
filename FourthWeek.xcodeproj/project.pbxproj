@@ -28,6 +28,9 @@
 		11E366BF2D377B0E008C1E04 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366BD2D377B0E008C1E04 /* MarketViewController.swift */; };
 		11E366C42D377C0F008C1E04 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366C32D377C0B008C1E04 /* Coin.swift */; };
 		11E366F92D3785CF008C1E04 /* BlackRadiusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E366F82D3785CF008C1E04 /* BlackRadiusLabel.swift */; };
+		11E367152D38AFDB008C1E04 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E367142D38AFD3008C1E04 /* BaseTableViewCell.swift */; };
+		11E367172D38B259008C1E04 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E367162D38B259008C1E04 /* BaseView.swift */; };
+		11E367192D38B33B008C1E04 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E367182D38B33B008C1E04 /* BookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		11E366BD2D377B0E008C1E04 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		11E366C32D377C0B008C1E04 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		11E366F82D3785CF008C1E04 /* BlackRadiusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusLabel.swift; sourceTree = "<group>"; };
+		11E367142D38AFD3008C1E04 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		11E367162D38B259008C1E04 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		11E367182D38B33B008C1E04 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +93,15 @@
 		11B76E9D2D34963600BCE282 /* FourthWeek */ = {
 			isa = PBXGroup;
 			children = (
-				11E366F72D3785B6008C1E04 /* CustomView */,
-				11B76EAC2D34963700BCE282 /* Info.plist */,
 				11E366C12D377B3A008C1E04 /* App */,
-				11E366C22D377B52008C1E04 /* ViewController */,
-				11E366992D375E75008C1E04 /* APIKey.swift */,
+				11E3671A2D38B344008C1E04 /* Book */,
+				11E367132D38AFB7008C1E04 /* Base */,
 				11E366C02D377B18008C1E04 /* Market */,
 				11E366942D375CDE008C1E04 /* Kakao */,
+				11E366F72D3785B6008C1E04 /* CustomView */,
+				11E366C22D377B52008C1E04 /* ViewController */,
+				11E366992D375E75008C1E04 /* APIKey.swift */,
+				11B76EAC2D34963700BCE282 /* Info.plist */,
 			);
 			path = FourthWeek;
 			sourceTree = "<group>";
@@ -134,7 +142,6 @@
 			children = (
 				11B76EA22D34963600BCE282 /* ViewController.swift */,
 				11B76EB42D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift */,
-				11B76EC72D34DA1F00BCE282 /* BookViewController.swift */,
 				118C28042D35E58F0054899D /* RandomViewController.swift */,
 			);
 			path = ViewController;
@@ -146,6 +153,24 @@
 				11E366F82D3785CF008C1E04 /* BlackRadiusLabel.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		11E367132D38AFB7008C1E04 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				11E367142D38AFD3008C1E04 /* BaseTableViewCell.swift */,
+				11E367162D38B259008C1E04 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		11E3671A2D38B344008C1E04 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				11E367182D38B33B008C1E04 /* BookView.swift */,
+				11B76EC72D34DA1F00BCE282 /* BookViewController.swift */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11B76EA32D34963600BCE282 /* ViewController.swift in Sources */,
+				11E367192D38B33B008C1E04 /* BookView.swift in Sources */,
 				11B76EB52D349CB400BCE282 /* ViewPresenstableProtocol.swift.swift in Sources */,
 				11E366F92D3785CF008C1E04 /* BlackRadiusLabel.swift in Sources */,
 				11B76EC82D34DA1F00BCE282 /* BookViewController.swift in Sources */,
@@ -244,7 +270,9 @@
 				11E366962D375CF5008C1E04 /* Book.swift in Sources */,
 				118C28052D35E58F0054899D /* RandomViewController.swift in Sources */,
 				11B76E9F2D34963600BCE282 /* AppDelegate.swift in Sources */,
+				11E367152D38AFDB008C1E04 /* BaseTableViewCell.swift in Sources */,
 				11B76EA12D34963600BCE282 /* SceneDelegate.swift in Sources */,
+				11E367172D38B259008C1E04 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
